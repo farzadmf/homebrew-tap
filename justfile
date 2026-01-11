@@ -22,4 +22,4 @@ update-moves version="":
     fi
     git add Casks/moves.rb
     git commit -q -m "Update moves to ${version}"
-    git push
+    git push -q
