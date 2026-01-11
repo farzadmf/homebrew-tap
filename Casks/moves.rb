@@ -1,6 +1,6 @@
 cask "moves" do
-  version "1.0.6"
-  sha256 "235a3d098a7b2383ab6f76e81c646d98fed9eb4b4c649ba1c4b20ad5ea8c5770"
+  version "1.0.8"
+  sha256 "a21b119458a10f8171a749226b7b29725ba700f333058f5a4e2812e896e37368"
 
   url "https://github.com/farzadmf/Moves/releases/download/v#{version}/Moves.zip"
   name "Moves"
