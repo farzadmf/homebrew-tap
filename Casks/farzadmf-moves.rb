@@ -1,4 +1,4 @@
-cask "moves" do
+cask "farzadmf-moves" do
   version "1.0.10"
   sha256 "2c2bad19d95480ffa8324335f0eced5c32975a1f72a1ecb6d74f6514db35095b"
 

@@ -2,7 +2,7 @@
 default:
     @just --list
 
-# Update moves cask to a new version
+# Update farzadmf-moves cask to a new version
 # Usage: just update-moves [version]  (defaults to latest release)
 update-moves version="":
     #!/usr/bin/env bash
@@ -18,14 +18,14 @@ update-moves version="":
     sha=$(curl -sL "https://github.com/farzadmf/Moves/releases/download/v${version}/Moves.zip" | shasum -a 256 | cut -d' ' -f1)
     echo "SHA256: ${sha}"
     if sed --version &>/dev/null; then
-        sed -i "s/version \".*\"/version \"${version}\"/" Casks/moves.rb
-        sed -i "s/sha256 \".*\"/sha256 \"$sha\"/" Casks/moves.rb
+        sed -i "s/version \".*\"/version \"${version}\"/" Casks/farzadmf-moves.rb
+        sed -i "s/sha256 \".*\"/sha256 \"$sha\"/" Casks/farzadmf-moves.rb
     else
-        sed -i '' "s/version \".*\"/version \"${version}\"/" Casks/moves.rb
-        sed -i '' "s/sha256 \".*\"/sha256 \"$sha\"/" Casks/moves.rb
+        sed -i '' "s/version \".*\"/version \"${version}\"/" Casks/farzadmf-moves.rb
+        sed -i '' "s/sha256 \".*\"/sha256 \"$sha\"/" Casks/farzadmf-moves.rb
     fi
     echo "Committing and pushing..."
-    git add Casks/moves.rb
-    git commit -q -m "Update moves to ${version}"
+    git add Casks/farzadmf-moves.rb
+    git commit -q -m "Update farzadmf-moves to ${version}"
     git push -q
-    echo "Done! Updated moves to ${version}"
+    echo "Done! Updated farzadmf-moves to ${version}"
